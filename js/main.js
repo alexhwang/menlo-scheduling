@@ -10,7 +10,7 @@ function populate_doctors() {
     $("#doctors").html("");
     
     $.ajax({
-        url: "find-doctors.php",
+        url: "php/find-doctors.php",
         success: function (data) {
             var doctor_seq = data.split(",");
             for (var i=0; i<doctor_seq.length-1; i++) {
@@ -54,7 +54,7 @@ function print_data(doctor) {
     Given a doctor, print their vacation days and flex days and the means to add/remove the days.
     */
     
-    var url = "retrieve-data.php?doctor=" + doctor;
+    var url = "php/retrieve-data.php?doctor=" + doctor;
     var response = "";
     $.get(url, function(data) {
         var selector = "#" + doctor + "_data";
@@ -123,7 +123,7 @@ function add_data(doctor) {
     var daytypeselect = document.getElementById("daytype");
     var daytype = daytypeselect.options[daytypeselect.selectedIndex].value;
     
-    var url = "update.php?action=add&daytype=" + daytype + "&doctor=" + doctor + "&newdata=(" + data + "," + hours + ")";
+    var url = "php/update.php?action=add&daytype=" + daytype + "&doctor=" + doctor + "&newdata=(" + data + "," + hours + ")";
     
     $.ajax({url: url,
            success: function () {
@@ -144,7 +144,7 @@ function remove_data(node) {
     tuple = "(" + date + "," + hours + ")";
     
     
-    var url = "update.php?action=remove&daytype=" + daytype + "&doctor=" + doctor + "&newdata=" + tuple;
+    var url = "php/update.php?action=remove&daytype=" + daytype + "&doctor=" + doctor + "&newdata=" + tuple;
     
     $.ajax({url: url,
            success: function () {

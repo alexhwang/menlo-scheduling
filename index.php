@@ -2,11 +2,11 @@
 <head>
     
 <link rel="stylesheet" href="resources/jquery-ui.css">
-<link rel="stylesheet" href="style.css"></style>
+<link rel="stylesheet" href="css/style.css"></style>
     
 <script src="resources/jquery.min.js"></script> 
 <script src="resources/jquery-ui.min.js"></script>
-<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 </head>
     
     
