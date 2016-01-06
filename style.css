@@ -1,0 +1,30 @@
+#doctors {
+    text-align:center;
+}
+.doctor_link {
+    font-size: 40px;
+    /* font-family: Helvetica Neue; */
+    color: deepskyblue;
+    margin-top: 20px;
+    display:block;
+}
+html {
+    font-family: Helvetica;
+}
+.date_blob {
+    display: inline-block;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    
+}
+.day_data {
+    /* line-height: 40px;
+    */
+}
+.remove_link {
+    font-size: 10px;
+    color: silver;
+    font-family: Helvetica;
+}
